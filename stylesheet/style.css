@@ -6,8 +6,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "SemilBold", sans-serif;
     color: #1A212F;
+    font-family: "Lato", sans-serif;
 }
 
 .page__header{
@@ -38,6 +38,7 @@
 
 .navigation__link{
     text-decoration: none;
+    font-family: "SemilBold", sans-serif;
 }
 
 .main__full-screen{
@@ -59,6 +60,7 @@
 .full-screen__title{
     font-size: 62px;
     font-weight: bold;
+    font-family: 'Rubik', sans-serif;
     margin: 15px 0 25px;
 }
 
@@ -79,6 +81,7 @@
     justify-items: end;
     cursor: pointer;
     grid-template-columns: 1fr 60px;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
 }
 
 .full-screen__button:after{
@@ -93,6 +96,7 @@
 .main__advantages{
     position: relative;
     overflow: hidden;
+    padding-bottom: 40px;
 }
 
 .main__advantages:after{
@@ -136,12 +140,14 @@
 
 .advantages__card .card__title{
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .advantages__card .card__text{
     width: 310px;
+    font-size: 15px;
 }
 
 .advantages__card .card__icon{
@@ -151,26 +157,199 @@
     margin-bottom: 35px;
 }
 
-.advantages__container article:nth-child(1) .card__icon{
+.advantages__card:nth-child(1) .card__icon{
     background-image: url("../images/advantages_icon-1.png");
 }
 
-.advantages__container article:nth-child(2) .card__icon{
+.advantages__card:nth-child(2) .card__icon{
     background-image: url("../images/advantages_icon-2.png");
 }
 
-.advantages__container article:nth-child(3) .card__icon{
+.advantages__card:nth-child(3) .card__icon{
     background-image: url("../images/advantages_icon-3.png");
 }
 
-.advantages__container article:nth-child(4) .card__icon{
+.advantages__card:nth-child(4) .card__icon{
     background-image: url("../images/advantages_icon-4.png");
 }
 
-.advantages__container article:nth-child(5) .card__icon{
+.advantages__card:nth-child(5) .card__icon{
     background-image: url("../images/advantages_icon-5.png");
 }
 
-.advantages__container article:nth-child(6) .card__icon{
+.advantages__card:nth-child(6) .card__icon{
     background-image: url("../images/advantages_icon-6.png");
+}
+
+.main__rooms{
+    margin-top: 100px;
+    position: relative;
+}
+
+.main__rooms:before{
+    content: '';
+    background-image: url("../images/fish.png");
+    height: 151px;
+    width: 484px;
+    display: block;
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    top: 10px;
+    z-index: 0;
+}
+
+.rooms__title{
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.slid__image{
+    width: 600px;
+    height: 404px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.rooms__slid:nth-child(1) .slid__image{
+    background-image: url("../images/slid_image-1.jpg");
+}
+
+.rooms__slid:nth-child(2) .slid__image{
+    background-image: url("../images/slid_image-2.jpg");
+}
+
+.rooms__slid:nth-child(3) .slid__image{
+    background-image: url("../images/slid_image-3.jpg");
+}
+
+.rooms__slider{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1030px;
+    height: 404px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rooms__slid{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -600px;
+    transition: 1s all ease-in-out;
+}
+
+.slid__container{
+    margin-left: 1100px;
+    width: 283px;
+    height: 204px;
+    border-radius: 8px;
+    box-shadow: 0 0  25px rgba(208, 208, 208, 0.25);
+    background-color: white;
+    padding: 40px 100px;
+    transition: 1s all ease-in-out;
+}
+
+.rooms__slid--active .slid__container{
+    margin-left: -70px;
+}
+
+.slid__title{
+    font-size: 21px;
+    font-weight: bolder;
+}
+
+.slid__list{
+    margin-top: 15px;
+    font-size: 16px;
+    list-style: url("../images/list_marker.png") inside;
+}
+
+.slid__item{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 10px;
+}
+
+.slid__button{
+    margin-top: 30px;
+    font-size: 15px;
+    width: 206px;
+    padding: 7px 0;
+    border-radius: 25px;
+    border: 0;
+    justify-items: end;
+    cursor: pointer;
+    background-color: #FF7236;
+    color: white;
+    display: grid;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: 1fr 60px;
+}
+
+.slid__button:after{
+    content: '';
+    background-image: url(../images/paw_orange.png);
+    height: 36px;
+    width: 36px;
+    display: block;
+    margin-right: 7px;
+}
+
+.rooms__slid--active{
+    left: 0;
+}
+
+.rooms__container{
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.rooms__points{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-column-gap: 12px;
+}
+
+.rooms__point{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E1E1E1;
+}
+
+.rooms__point--active{
+    background-color: #FAC663;
+}
+
+.rooms__arrows{
+    display: flex;
+}
+
+.rooms__arrow{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF7236;
+    font-size: 21px;
+    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.25);
+}
+
+.rooms__arrow+.rooms__arrow{
+    margin-left: 10px;
 }
