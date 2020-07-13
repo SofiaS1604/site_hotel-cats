@@ -353,3 +353,27 @@
 .rooms__arrow+.rooms__arrow{
     margin-left: 10px;
 }
+
+.reviews{
+    position: relative;
+}
+
+.reviews:after{
+    content: '';
+    background-image: url("../images/big_paw-2.png");
+    height: 410px;
+    width: 367px;
+    display: block;
+    position: absolute;
+    right: 0;
+    background-size: cover;
+    top: -200px;
+    z-index: 1;
+}
+
+.reviews__title{
+    font-size: 36px;
+    text-align: center;
+    margin-top: 130px;
+    font-weight: bold;
+}
