@@ -21,6 +21,7 @@
 
 .page__main{
     background-color: #FFFDFB;
+    overflow: hidden;
 }
 
 .navigation__container{
@@ -239,18 +240,18 @@
     display: flex;
     align-items: center;
     left: -600px;
-    transition: 1s all ease-in-out;
+    transition: 0.8s all ease-in-out;
 }
 
 .slid__container{
     margin-left: 1100px;
-    width: 283px;
+    width: 293px;
     height: 204px;
     border-radius: 8px;
     box-shadow: 0 0  25px rgba(208, 208, 208, 0.25);
     background-color: white;
-    padding: 40px 100px;
-    transition: 1s all ease-in-out;
+    padding: 40px 95px;
+    transition: 0.8s all ease-in-out;
 }
 
 .rooms__slid--active .slid__container{
@@ -304,7 +305,7 @@
     left: 0;
 }
 
-.rooms__container{
+.rooms__container, .reviews__container{
     margin-top: 55px;
     display: grid;
     grid-template-columns: 1fr 120px;
@@ -315,29 +316,31 @@
     padding-bottom: 10px;
 }
 
-.rooms__points{
+.rooms__points, .reviews__points{
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
     grid-column-gap: 12px;
+    margin-left: 120px;
 }
 
-.rooms__point{
+.rooms__point, .reviews__point{
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #E1E1E1;
 }
 
-.rooms__point--active{
+.rooms__point--active, .reviews__point--active{
     background-color: #FAC663;
 }
 
-.rooms__arrows{
+.rooms__arrows, .reviews__arrows{
     display: flex;
+    z-index: 2;
 }
 
-.rooms__arrow{
+.rooms__arrow, .reviews__arrow{
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -345,20 +348,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
     color: #FF7236;
     font-size: 21px;
     box-shadow: 0 2px 12px rgba(173, 152, 143, 0.25);
 }
 
-.rooms__arrow+.rooms__arrow{
+.rooms__arrow+.rooms__arrow, .reviews__arrow+.reviews__arrow{
     margin-left: 10px;
 }
 
-.reviews{
+.main__reviews{
     position: relative;
 }
 
-.reviews:after{
+.main__reviews:after{
     content: '';
     background-image: url("../images/big_paw-2.png");
     height: 410px;
@@ -368,7 +372,7 @@
     right: 0;
     background-size: cover;
     top: -200px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .reviews__title{
@@ -376,4 +380,131 @@
     text-align: center;
     margin-top: 130px;
     font-weight: bold;
+}
+
+.reviews__slider{
+    margin-left: 100px;
+    margin-top: 70px;
+    transition: 0.6s all ease-in-out;
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+    grid-template-columns: 470px;
+}
+
+.reviews__slid{
+    padding: 35px;
+    font-size: 15px;
+    width: 400px;
+    height: 136px;
+    box-shadow: 0 0  25px rgba(208, 208, 208, 0.25);
+    background-color: white;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.slid__text{
+    display: flex;
+}
+
+.slid__text:before{
+    content: '“';
+    font-size: 72px;
+    color: #FAC663;
+    margin-top: -10px;
+    margin-right: 8px;
+}
+
+.slid__info{
+    font-size: 14px;
+    margin-left: 34px;
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 30px;
+}
+
+.slid__user, .slid__data{
+    color: #848484;
+}
+
+.slid__data{
+    text-align: end;
+}
+
+.main__map{
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 130px;
+}
+
+#map__block{
+    width: calc(100vw - 568px);
+    height: 580px;
+}
+
+.map__container{
+    width: 373px;
+    height: 440px;
+    background-color: #FAC473;
+    padding-left: 13.542vw;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.map__title{
+    font-size: 36px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.map__container div + div{
+    margin-top: 25px;
+}
+
+.map__caption{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.networks__icons{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    justify-content: start;
+    margin-top: 10px !important;
+}
+
+.networks__icon{
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    margin-top: 0 !important;
+    cursor: pointer;
+}
+
+
+.networks__icon:nth-child(1){
+    background-image: url("../images/icon_f.png");
+}
+
+.networks__icon:nth-child(2){
+    background-image: url("../images/icon_i.png");
+}
+
+.networks__icon:nth-child(3){
+    background-image: url("../images/icon_v.png");
+}
+
+.page__footer{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    height: 75px;
+    padding-left: 13.542vw;
+    padding-right: 13.542vw;
+}
+
+.footer__logo{
+    width: 64px;
 }

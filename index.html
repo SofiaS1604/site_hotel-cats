@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./stylesheet/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=71cdf11b-24e2-49e6-952c-706a8162b6fd&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body class="page">
 <header class="page__header header">
@@ -147,16 +148,143 @@
                 <div class="rooms__point"></div>
             </div>
             <div class="rooms__arrows">
-                <div class="rooms__arrow rooms__arrow--left"> < </div>
-                <div class="rooms__arrow rooms__arrow--right"> > </div>
+                <div class="rooms__arrow rooms__arrow--left" onclick="playSliderRooms('left')"> <</div>
+                <div class="rooms__arrow rooms__arrow--right" onclick="playSliderRooms('right')"> ></div>
             </div>
         </div>
     </div>
     <div class="main__reviews reviews">
         <div class="reviews__title">Отзывы</div>
-        <div class="reviews__slider"></div>
+        <div class="reviews__slider">
+            <div class="reviews__slid slid">
+                <div class="slid__text">
+                    Первый раз пришлось оставить нашего котика <br>
+                    в гостинице, очень переживали. Администратор <br>
+                    Мария каждый день высылала нам фото нашего <br>
+                    питомца, рассказывала, как он себя чувствует.<br>
+                    И мы и котик остались очень довольны!
+                </div>
+                <div class="slid__info">
+                    <div class="slid__user">Валерия Гришаева</div>
+                    <div class="slid__data">15 ноября, 2019</div>
+                </div>
+            </div>
+            <div class="reviews__slid slid">
+                <div class="slid__text">
+                    Гостиницу для питомцев нам посоветовали <br>
+                    друзья. Они всегда оставляют здесь своего кота, <br>
+                    когда уезжают. В “Котейке” очень хорошо <br>
+                    заботятся о питомцах, в гостинице очень чисто. <br>
+                    Всем рекомендую! Будем обращаться еще.
+                </div>
+                <div class="slid__info">
+                    <div class="slid__user">Екатерина Минаева</div>
+                    <div class="slid__data">10 октября, 2019</div>
+                </div>
+            </div>
+            <div class="reviews__slid slid">
+                <div class="slid__text">
+                    Мой кот — настоящая привереда, угодить ему <br>
+                    сложно. У меня были особые требования к <br>
+                    уходу за ним, и “Котейка” отлично справились. Я <br>
+                    часто наблюдал по видео за питомцем со <br>
+                    своего телефона, это очень удобно.
+                </div>
+                <div class="slid__info">
+                    <div class="slid__user">Павел Нечаев</div>
+                    <div class="slid__data">2 августа, 2019</div>
+                </div>
+            </div>
+            <div class="reviews__slid slid">
+                <div class="slid__text">
+                    Первый раз пришлось оставить нашего котика <br>
+                    в гостинице, очень переживали. Администратор <br>
+                    Мария каждый день высылала нам фото нашего <br>
+                    питомца, рассказывала, как он себя чувствует.<br>
+                    И мы и котик остались очень довольны!
+                </div>
+                <div class="slid__info">
+                    <div class="slid__user">Валерия Гришаева</div>
+                    <div class="slid__data">15 ноября, 2019</div>
+                </div>
+            </div>
+            <div class="reviews__slid slid">
+                <div class="slid__text">
+                    Гостиницу для питомцев нам посоветовали <br>
+                    друзья. Они всегда оставляют здесь своего кота, <br>
+                    когда уезжают. В “Котейке” очень хорошо <br>
+                    заботятся о питомцах, в гостинице очень чисто. <br>
+                    Всем рекомендую! Будем обращаться еще.
+                </div>
+                <div class="slid__info">
+                    <div class="slid__user">Екатерина Минаева</div>
+                    <div class="slid__data">10 октября, 2019</div>
+                </div>
+            </div>
+        </div>
+        <div class="reviews__container">
+            <div class="reviews__points">
+                <div class="reviews__point reviews__point--active"></div>
+                <div class="reviews__point"></div>
+                <div class="reviews__point"></div>
+            </div>
+            <div class="reviews__arrows">
+                <div class="reviews__arrow reviews__arrow--left" onclick="playSliderReviews('left')"> <</div>
+                <div class="reviews__arrow reviews__arrow--right" onclick="playSliderReviews('right')"> ></div>
+            </div>
+        </div>
+    </div>
+    <div class="main__map map">
+        <div class="map__container">
+            <div class="map__title">Как нас найти</div>
+            <div class="map__address">
+                <div class="map__caption">Адрес</div>
+                Санкт-Петербург, <br>
+                ул Большая Конюшенная, д 19
+            </div>
+            <div class="map__mode">
+                <div class="map__caption">Режи работы</div>
+                Ежедневно, с 9:00 до 20:00
+            </div>
+            <div class="map__phone">
+                <div class="map__caption">Телефон</div>
+                8 (800) 333-55-99
+            </div>
+            <div class="map__mail">
+                <div class="map__caption">E-mail</div>
+                info@cat-hotel.ru
+            </div>
+            <div class="map__networks networks">
+                <div class="map__caption">Социальные сети</div>
+                <div class="networks__icons">
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                </div>
+            </div>
+        </div>
+        <div id="map__block"></div>
     </div>
 </main>
+<footer class="page__footer footer">
+    <img src="./images/logo.png" alt="Logo" class="footer__logo"/>
+    <nav class="footer__navigation navigation">
+        <ul class="navigation__container">
+            <li class="navigation__item">
+                <a href="" class="navigation__link">Почему мы?</a>
+            </li>
+            <li class="navigation__item">
+                <a href="" class="navigation__link">Номера</a>
+            </li>
+            <li class="navigation__item">
+                <a href="" class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a href="" class="navigation__link">Как нас найти</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
 <script src="./js/script.js"></script>
 </body>
 </html>
