@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheet/style.css">
+    <link rel="stylesheet" href="./stylesheet/rooms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=71cdf11b-24e2-49e6-952c-706a8162b6fd&lang=ru_RU"
+            type="text/javascript"></script>
+</head>
+<body class="page">
+<header class="page__header header">
+    <img src="./images/logo.png" alt="Logo" class="header__logo"/>
+    <nav class="header__navigation navigation">
+        <ul class="navigation__container">
+            <li class="navigation__item">
+                <a href="./index.html#advantages" class="navigation__link">Почему мы?</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#rooms" class="navigation__link">Номера</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#reviews" class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#map" class="navigation__link">Как нас найти</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="page__main main">
+    <div class="main__rooms rooms">
+        <div class="rooms__header">
+            <div class="rooms__title">Наши номера</div>
+            <label class="rooms__block">
+                <select class="rooms__select">
+                    <option value="">&#8593; По площади</option>
+                    <option value="">&#8595; По площади</option>
+                    <option value="">&#8593; По цене</option>
+                    <option value="">&#8595; По цене</option>
+                </select>
+            </label>
+        </div>
+        <div class="rooms__main">
+            <div class="rooms__panel">
+
+            </div>
+            <div class="rooms__container"></div>
+        </div>
+        <div class="rooms__banner banner">
+            <div class="banner__container">
+                <div class="banner__caption">Каждый 7-й день</div>
+                <div class="banner__title">бесплатно!</div>
+                <div class="banner__text">
+                    Акция действует при размещении
+                    в номерах “Люкс” и “Супер-Люкс”
+                </div>
+                <div class="banner__button">Забронировать</div>
+            </div>
+        </div>
+    </div>
+    <div class="main__map map" id="map">
+        <div class="map__container">
+            <div class="map__title">Как нас найти</div>
+            <div class="map__address">
+                <div class="map__caption">Адрес</div>
+                Санкт-Петербург, <br>
+                ул Большая Конюшенная, д 19
+            </div>
+            <div class="map__mode">
+                <div class="map__caption">Режи работы</div>
+                Ежедневно, с 9:00 до 20:00
+            </div>
+            <div class="map__phone">
+                <div class="map__caption">Телефон</div>
+                8 (800) 333-55-99
+            </div>
+            <div class="map__mail">
+                <div class="map__caption">E-mail</div>
+                info@cat-hotel.ru
+            </div>
+            <div class="map__networks networks">
+                <div class="map__caption">Социальные сети</div>
+                <div class="networks__icons">
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                </div>
+            </div>
+        </div>
+        <div id="map__block"></div>
+    </div>
+</main>
+<footer class="page__footer footer">
+    <img src="./images/logo.png" alt="Logo" class="footer__logo"/>
+    <nav class="footer__navigation navigation">
+        <ul class="navigation__container">
+            <li class="navigation__item">
+                <a href="./index.html#advantages" class="navigation__link">Почему мы?</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#rooms" class="navigation__link">Номера</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#reviews" class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#map" class="navigation__link">Как нас найти</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

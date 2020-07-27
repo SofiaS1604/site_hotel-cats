@@ -1,0 +1,105 @@
+@font-face {
+    src: url("../fonts/2212.ttf");
+    font-family: "SemilBold", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #1A212F;
+    font-family: "Lato", sans-serif;
+}
+
+.rooms__select{
+    width: 174px;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.2) ;
+    border: 0;
+    color: #1A212F;
+}
+
+.main__rooms{
+    padding-left: 98px;
+    padding-right: 98px;
+}
+
+.rooms__header{
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 70px;
+}
+
+.rooms__title{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 20px;
+}
+
+.rooms__block{
+    margin-left: auto;
+}
+
+.rooms__banner{
+    height: 379px;
+    width: calc(100vw - (98px * 2));
+    background-size: cover;
+    background-image: url("../images/banner.jpg");
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner__container{
+    margin-left: 18.75vw;
+    margin-top: 78px;
+    margin-bottom: 78px;
+}
+
+.banner__caption{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    height: 38px;
+}
+
+.banner__title{
+    font-size: 56px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 10px;
+}
+
+.banner__text{
+    width: 259px;
+    margin-bottom: 20px;
+}
+
+.banner__button{
+    font-size: 15px;
+    width: 206px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    padding: 7px 0;
+    border-radius: 25px;
+    border: 0;
+    justify-items: end;
+    cursor: pointer;
+    grid-template-columns: 1fr 60px;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
+    text-decoration: none;
+    background-color: #FFFEFD;
+}
+
+.banner__button:after{
+    content: '';
+    background-image: url("../images/paw.png");
+    height: 36px;
+    width: 36px;
+    display: block;
+    margin-right: 7px;
+}
