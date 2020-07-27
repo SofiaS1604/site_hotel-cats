@@ -1,15 +1,3 @@
-@font-face {
-    src: url("../fonts/2212.ttf");
-    font-family: "SemilBold", sans-serif;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    color: #1A212F;
-    font-family: "Lato", sans-serif;
-}
-
 .rooms__select{
     width: 174px;
     height: 35px;
@@ -51,12 +39,13 @@
     background-image: url("../images/banner.jpg");
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 140px;
 }
 
 .banner__container{
     margin-left: 18.75vw;
-    margin-top: 78px;
-    margin-bottom: 78px;
+    margin-top: 76px;
+    margin-bottom: 76px;
 }
 
 .banner__caption{
@@ -70,12 +59,12 @@
     font-size: 56px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 .banner__text{
     width: 259px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .banner__button{
@@ -102,4 +91,81 @@
     width: 36px;
     display: block;
     margin-right: 7px;
+}
+
+.rooms__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 270px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+
+.rooms__card{
+    width: 270px;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
+}
+
+.card__title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.card__block{
+    border: 1px solid #E1E1E1;
+    padding: 15px;
+    border-bottom-left-radius: 6px;
+    background-color: #fff;
+    border-bottom-right-radius: 6px;
+}
+
+.card__text{
+    margin-bottom: 15px;
+}
+
+.card__line{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.line__bold{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card__button{
+    font-size: 14px;
+    width: 230px;
+    border-radius: 25px;
+    border: 0;
+    justify-items: center;
+    cursor: pointer;
+    background-color: #FF7236;
+    color: white;
+    display: grid;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
+    grid-auto-flow: column;
+    align-items: center;
+    height: 46px;
+    grid-template-columns: 1fr 42px;
+    text-decoration: none;
+}
+
+.card__button:after{
+    content: '';
+    background-image: url(../images/paw_orange.png);
+    height: 34px;
+    width: 34px;
+    display: block;
+    background-size: cover;
+    margin-right: 3px;
+}
+
+.line__block{
+    margin-left: 5px;
 }
