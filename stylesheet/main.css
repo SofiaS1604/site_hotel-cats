@@ -1,4 +1,4 @@
-.main__full-screen{
+.main__full-screen {
     height: 505px;
     background-image: url("../images/header__image.jpg");
     background-size: cover;
@@ -6,27 +6,27 @@
     align-items: center;
 }
 
-.full-screen__content{
+.full-screen__content {
     margin-left: 14.495vw;
 }
 
-.full-screen__caption{
+.full-screen__caption {
     font-size: 14px;
 }
 
-.full-screen__title{
+.full-screen__title {
     font-size: 62px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
     margin: 15px 0 25px;
 }
 
-.full-screen__text{
+.full-screen__text {
     font-size: 20px;
     margin-bottom: 40px;
 }
 
-.full-screen__button{
+.full-screen__button {
     font-size: 15px;
     width: 206px;
     display: grid;
@@ -43,7 +43,7 @@
     background-color: #FFFEFD;
 }
 
-.full-screen__button:after{
+.full-screen__button:after {
     content: '';
     background-image: url("../images/paw.png");
     height: 36px;
@@ -52,13 +52,13 @@
     margin-right: 7px;
 }
 
-.main__advantages{
+.main__advantages {
     position: relative;
     overflow: hidden;
     padding-bottom: 40px;
 }
 
-.main__advantages:after{
+.main__advantages:after {
     content: '';
     background-image: url("../images/big_paw.png");
     height: 410px;
@@ -71,7 +71,7 @@
     z-index: 1;
 }
 
-.advantages__title{
+.advantages__title {
     font-size: 36px;
     font-weight: bold;
     margin-top: 160px;
@@ -79,7 +79,7 @@
     margin-bottom: 70px;
 }
 
-.advantages__container{
+.advantages__container {
     display: grid;
     grid-template-columns: repeat(3, 370px);
     grid-column-gap: 30px;
@@ -87,7 +87,7 @@
     justify-content: center;
 }
 
-.advantages__card{
+.advantages__card {
     width: 310px;
     height: 261px;
     border-radius: 8px;
@@ -97,55 +97,55 @@
     z-index: 2;
 }
 
-.advantages__card .card__title{
+.advantages__card .card__title {
     font-size: 22px;
     font-weight: 500;
     margin-bottom: 20px;
     font-family: 'Rubik', sans-serif;
 }
 
-.advantages__card .card__text{
+.advantages__card .card__text {
     width: 310px;
     font-size: 15px;
 }
 
-.advantages__card .card__icon{
+.advantages__card .card__icon {
     width: 91px;
     height: 91px;
     background-size: cover;
     margin-bottom: 35px;
 }
 
-.advantages__card:nth-child(1) .card__icon{
+.advantages__card:nth-child(1) .card__icon {
     background-image: url("../images/advantages_icon-1.png");
 }
 
-.advantages__card:nth-child(2) .card__icon{
+.advantages__card:nth-child(2) .card__icon {
     background-image: url("../images/advantages_icon-2.png");
 }
 
-.advantages__card:nth-child(3) .card__icon{
+.advantages__card:nth-child(3) .card__icon {
     background-image: url("../images/advantages_icon-3.png");
 }
 
-.advantages__card:nth-child(4) .card__icon{
+.advantages__card:nth-child(4) .card__icon {
     background-image: url("../images/advantages_icon-4.png");
 }
 
-.advantages__card:nth-child(5) .card__icon{
+.advantages__card:nth-child(5) .card__icon {
     background-image: url("../images/advantages_icon-5.png");
 }
 
-.advantages__card:nth-child(6) .card__icon{
+.advantages__card:nth-child(6) .card__icon {
     background-image: url("../images/advantages_icon-6.png");
 }
 
-.main__rooms{
+.main__rooms {
     margin-top: 100px;
     position: relative;
 }
 
-.main__rooms:before{
+.main__rooms:before {
     content: '';
     background-image: url("../images/fish.png");
     height: 151px;
@@ -158,33 +158,33 @@
     z-index: 0;
 }
 
-.rooms__title{
+.rooms__title {
     font-weight: bold;
     font-size: 36px;
     text-align: center;
     margin-bottom: 70px;
 }
 
-.slid__image{
+.slid__image {
     width: 600px;
     height: 404px;
     border-radius: 10px;
     background-size: cover;
 }
 
-.rooms__slid:nth-child(1) .slid__image{
+.rooms__slid:nth-child(1) .slid__image {
     background-image: url("../images/slid_image-1.jpg");
 }
 
-.rooms__slid:nth-child(2) .slid__image{
+.rooms__slid:nth-child(2) .slid__image {
     background-image: url("../images/slid_image-2.jpg");
 }
 
-.rooms__slid:nth-child(3) .slid__image{
+.rooms__slid:nth-child(3) .slid__image {
     background-image: url("../images/slid_image-3.jpg");
 }
 
-.rooms__slider{
+.rooms__slider {
     margin-left: auto;
     margin-right: auto;
     width: 1030px;
@@ -193,7 +193,7 @@
     position: relative;
 }
 
-.rooms__slid{
+.rooms__slid {
     position: absolute;
     display: flex;
     align-items: center;
@@ -201,42 +201,42 @@
     transition: 0.8s all ease-in-out;
 }
 
-.rooms__slid--active{
+.rooms__slid--active {
     z-index: 1;
 }
 
-.slid__container{
+.slid__container {
     margin-left: 1100px;
     width: 293px;
     height: 204px;
     border-radius: 8px;
-    box-shadow: 0 0  25px rgba(208, 208, 208, 0.25);
+    box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
     background-color: white;
     padding: 40px 95px;
     transition: 0.8s all ease-in-out;
 }
 
-.rooms__slid--active .slid__container{
+.rooms__slid--active .slid__container {
     margin-left: -70px;
 }
 
-.slid__title{
+.slid__title {
     font-size: 21px;
     font-weight: bolder;
 }
 
-.slid__list{
+.slid__list {
     margin-top: 15px;
     font-size: 16px;
     list-style: url("../images/list_marker.png") inside;
 }
 
-.slid__item{
+.slid__item {
     font-family: 'Lato', sans-serif;
     margin-bottom: 10px;
 }
 
-.slid__button{
+.slid__button {
     margin-top: 30px;
     font-size: 15px;
     width: 206px;
@@ -255,7 +255,7 @@
     text-decoration: none;
 }
 
-.slid__button:after{
+.slid__button:after {
     content: '';
     background-image: url(../images/paw_orange.png);
     height: 36px;
@@ -264,11 +264,11 @@
     margin-right: 7px;
 }
 
-.rooms__slid--active{
+.rooms__slid--active {
     left: 0;
 }
 
-.rooms__container, .reviews__container{
+.rooms__container, .reviews__container {
     margin-top: 55px;
     display: grid;
     grid-template-columns: 1fr 120px;
@@ -279,7 +279,7 @@
     padding-bottom: 10px;
 }
 
-.rooms__points, .reviews__points{
+.rooms__points, .reviews__points {
     display: grid;
     grid-auto-flow: column;
     justify-content: center;
@@ -287,23 +287,23 @@
     margin-left: 120px;
 }
 
-.rooms__point, .reviews__point{
+.rooms__point, .reviews__point {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #E1E1E1;
 }
 
-.rooms__point--active, .reviews__point--active{
+.rooms__point--active, .reviews__point--active {
     background-color: #FAC663;
 }
 
-.rooms__arrows, .reviews__arrows{
+.rooms__arrows, .reviews__arrows {
     display: flex;
     z-index: 2;
 }
 
-.rooms__arrow, .reviews__arrow{
+.rooms__arrow, .reviews__arrow {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -317,15 +317,15 @@
     box-shadow: 0 2px 12px rgba(173, 152, 143, 0.25);
 }
 
-.rooms__arrow+.rooms__arrow, .reviews__arrow+.reviews__arrow{
+.rooms__arrow + .rooms__arrow, .reviews__arrow + .reviews__arrow {
     margin-left: 10px;
 }
 
-.main__reviews{
+.main__reviews {
     position: relative;
 }
 
-.main__reviews:after{
+.main__reviews:after {
     content: '';
     background-image: url("../images/big_paw-2.png");
     height: 410px;
@@ -338,14 +338,14 @@
     z-index: 0;
 }
 
-.reviews__title{
+.reviews__title {
     font-size: 36px;
     text-align: center;
     margin-top: 130px;
     font-weight: bold;
 }
 
-.reviews__slider{
+.reviews__slider {
     margin-left: 100px;
     margin-top: 70px;
     transition: 0.6s all ease-in-out;
@@ -355,22 +355,22 @@
     grid-template-columns: 470px;
 }
 
-.reviews__slid{
+.reviews__slid {
     padding: 35px;
     font-size: 15px;
     width: 400px;
     height: 136px;
-    box-shadow: 0 0  25px rgba(208, 208, 208, 0.25);
+    box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
     background-color: white;
     border-radius: 8px;
     z-index: 2;
 }
 
-.slid__text{
+.slid__text {
     display: flex;
 }
 
-.slid__text:before{
+.slid__text:before {
     content: '“';
     font-size: 72px;
     color: #FAC663;
@@ -378,7 +378,7 @@
     margin-right: 8px;
 }
 
-.slid__info{
+.slid__info {
     font-size: 14px;
     margin-left: 34px;
     display: grid;
@@ -386,10 +386,10 @@
     margin-top: 30px;
 }
 
-.slid__user, .slid__data{
+.slid__user, .slid__data {
     color: #848484;
 }
 
-.slid__data{
+.slid__data {
     text-align: end;
 }

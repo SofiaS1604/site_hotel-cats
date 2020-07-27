@@ -1,38 +1,42 @@
-.rooms__select{
+.rooms__select {
     width: 174px;
     height: 35px;
     font-size: 14px;
     border-radius: 25px;
     padding-left: 20px;
     padding-right: 20px;
-    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.2) ;
+    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.2);
     border: 0;
     color: #1A212F;
 }
 
-.main__rooms{
+.main__rooms {
     padding-left: 98px;
     padding-right: 98px;
 }
 
-.rooms__header{
+.rooms__header {
     display: grid;
     grid-auto-flow: column;
     margin-top: 70px;
 }
 
-.rooms__title{
+.rooms__container {
+    margin-top: 30px;
+}
+
+.rooms__title {
     font-size: 36px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
     margin-bottom: 20px;
 }
 
-.rooms__block{
+.rooms__block {
     margin-left: auto;
 }
 
-.rooms__banner{
+.rooms__banner {
     height: 379px;
     width: calc(100vw - (98px * 2));
     background-size: cover;
@@ -42,32 +46,32 @@
     margin-top: 140px;
 }
 
-.banner__container{
+.banner__container {
     margin-left: 18.75vw;
     margin-top: 76px;
     margin-bottom: 76px;
 }
 
-.banner__caption{
+.banner__caption {
     font-size: 36px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
     height: 38px;
 }
 
-.banner__title{
+.banner__title {
     font-size: 56px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
     margin-bottom: 9px;
 }
 
-.banner__text{
+.banner__text {
     width: 259px;
     margin-bottom: 25px;
 }
 
-.banner__button{
+.banner__button {
     font-size: 15px;
     width: 206px;
     display: grid;
@@ -84,7 +88,7 @@
     background-color: #FFFEFD;
 }
 
-.banner__button:after{
+.banner__button:after {
     content: '';
     background-image: url("../images/paw.png");
     height: 36px;
@@ -93,14 +97,14 @@
     margin-right: 7px;
 }
 
-.rooms__container{
+.rooms__cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 270px);
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 }
 
-.rooms__card{
+.rooms__card {
     width: 270px;
     display: grid;
     grid-auto-flow: row;
@@ -108,7 +112,7 @@
     box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
 }
 
-.card__title{
+.card__title {
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -116,7 +120,7 @@
     font-family: 'Rubik', sans-serif;
 }
 
-.card__block{
+.card__block {
     border: 1px solid #E1E1E1;
     padding: 15px;
     border-bottom-left-radius: 6px;
@@ -124,21 +128,21 @@
     border-bottom-right-radius: 6px;
 }
 
-.card__text{
+.card__text {
     margin-bottom: 15px;
 }
 
-.card__line{
+.card__line {
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-.line__bold{
+.line__bold {
     font-size: 18px;
     font-weight: bolder;
 }
 
-.card__button{
+.card__button {
     font-size: 14px;
     width: 230px;
     border-radius: 25px;
@@ -156,7 +160,7 @@
     text-decoration: none;
 }
 
-.card__button:after{
+.card__button:after {
     content: '';
     background-image: url(../images/paw_orange.png);
     height: 34px;
@@ -166,6 +170,28 @@
     margin-right: 3px;
 }
 
-.line__block{
+.line__block {
     margin-left: 5px;
+}
+
+.line__block {
+    display: inline-block;
+    position: relative;
+}
+
+.line__block:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    top: -48px;
+    left: -85px;
+    z-index: 2;
+    background-image: url("../images/Union.svg");
+    background-size: cover;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 47px;
+    width: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
