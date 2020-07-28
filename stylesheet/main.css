@@ -4,6 +4,7 @@
     background-size: cover;
     display: grid;
     align-items: center;
+    margin-bottom: 70px;
 }
 
 .full-screen__content {
@@ -55,7 +56,8 @@
 .main__advantages {
     position: relative;
     overflow: hidden;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
+    padding-top: 70px;
 }
 
 .main__advantages:after {
@@ -74,9 +76,7 @@
 .advantages__title {
     font-size: 36px;
     font-weight: bold;
-    margin-top: 160px;
     text-align: center;
-    margin-bottom: 70px;
 }
 
 .advantages__container {
@@ -85,6 +85,7 @@
     grid-column-gap: 30px;
     grid-row-gap: 20px;
     justify-content: center;
+    margin-top: 70px;
 }
 
 .advantages__card {
@@ -141,8 +142,9 @@
 }
 
 .main__rooms {
-    margin-top: 100px;
+    padding-top: 70px;
     position: relative;
+    padding-bottom: 65px;
 }
 
 .main__rooms:before {
@@ -162,7 +164,6 @@
     font-weight: bold;
     font-size: 36px;
     text-align: center;
-    margin-bottom: 70px;
 }
 
 .slid__image {
@@ -191,6 +192,7 @@
     height: 404px;
     overflow: hidden;
     position: relative;
+    margin-top: 70px;
 }
 
 .rooms__slid {
@@ -323,6 +325,7 @@
 
 .main__reviews {
     position: relative;
+    padding-top: 65px;
 }
 
 .main__reviews:after {
@@ -341,7 +344,6 @@
 .reviews__title {
     font-size: 36px;
     text-align: center;
-    margin-top: 130px;
     font-weight: bold;
 }
 

@@ -1,5 +1,6 @@
-const $ = el => document.querySelector(el);
-const $$ = (el, key) => document.getElementsByClassName(el)[key];
+const $ = el => document.querySelector(el),
+    $$ = (el, key) => document.getElementsByClassName(el)[key],
+    all = el => document.querySelectorAll(el);
 
 let i = 0;
 let left = 100;
@@ -54,3 +55,19 @@ ymaps.ready(function () {
         myMap.geoObjects
             .add(myPlacemark)
 });
+
+all('.navigation__link').forEach(el => {
+    el.addEventListener('click', (e) => {
+        let url = el.attributes["href"].value.split('#');
+        if(url[0] !== "./index.html"){
+            e.preventDefault();
+            let block = $(`#${url[1]}`);
+
+            window.scroll({
+                behavior: "smooth",
+                top: block.offsetTop,
+                left: 0
+            })
+        }
+    }, true)
+})
