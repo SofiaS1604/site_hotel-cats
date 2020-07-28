@@ -63,7 +63,7 @@ all('.navigation__link').forEach(el => {
             e.preventDefault();
             let block = $(`#${url[1]}`);
 
-            window.scroll({
+            window.scrollTo({
                 behavior: "smooth",
                 top: block.offsetTop,
                 left: 0
