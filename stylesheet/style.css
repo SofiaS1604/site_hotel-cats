@@ -52,7 +52,7 @@
 }
 
 #map__block{
-    width: calc(100vw - 568px);
+    width: calc(100vw - (373px + 13.542vw));
     height: 580px;
 }
 
