@@ -52,14 +52,14 @@ ymaps.ready(function () {
         iconImageOffset: [-25, 0]
     }),
 
-        myMap.geoObjects
-            .add(myPlacemark)
+    myMap.geoObjects
+        .add(myPlacemark)
 });
 
 all('.navigation__link').forEach(el => {
     el.addEventListener('click', (e) => {
         let url = el.attributes["href"].value.split('#');
-        if(url[0] !== "./index.html"){
+        if (url[0] !== "./index.html") {
             e.preventDefault();
             let block = $(`#${url[1]}`);
 
@@ -70,4 +70,4 @@ all('.navigation__link').forEach(el => {
             })
         }
     }, true)
-})
+});

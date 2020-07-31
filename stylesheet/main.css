@@ -81,7 +81,7 @@
 
 .advantages__container {
     display: grid;
-    grid-template-columns: repeat(3, 370px);
+    grid-template-columns: repeat(auto-fit, 370px);
     grid-column-gap: 30px;
     grid-row-gap: 20px;
     justify-content: center;
