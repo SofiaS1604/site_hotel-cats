@@ -2,8 +2,8 @@ const $ = el => document.querySelector(el),
     $$ = (el, key) => document.getElementsByClassName(el)[key],
     all = el => document.querySelectorAll(el);
 
-let i = 0;
-let left = 100;
+let i = 0,
+    left = 100;
 
 let playSliderRooms = (type) => {
     if (type === 'left') {
@@ -52,8 +52,8 @@ ymaps.ready(function () {
         iconImageOffset: [-25, 0]
     }),
 
-    myMap.geoObjects
-        .add(myPlacemark)
+        myMap.geoObjects
+            .add(myPlacemark)
 });
 
 all('.navigation__link').forEach(el => {
@@ -71,3 +71,21 @@ all('.navigation__link').forEach(el => {
         }
     }, true)
 });
+
+
+function selectOpen() {
+    $('.select__value').style.display = 'none';
+    $('.select__options').style.display = 'block';
+}
+
+function selectChange(value, index) {
+    $$('select__option', index).innerHTML = $$('select__option', 0).innerText;
+    $$('select__option', index).attributes[1].value = `selectChange("${$$('select__option', 0).innerText}", ${index})`
+
+    $$('select__text', 1).innerText = value;
+    $$('select__option', 0).attributes[1].value = `selectChange("${value}", 0)`;
+
+    $('.select__options').style.display = 'none';
+    $$('select__text', 0).innerText = value;
+    $('.select__value').style.display = 'flex';
+}

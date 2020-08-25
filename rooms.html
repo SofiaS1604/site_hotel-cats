@@ -36,14 +36,23 @@
     <div class="main__rooms rooms">
         <div class="rooms__header">
             <div class="rooms__title">Наши номера</div>
-            <!--<label class="rooms__block"
-                <select class="rooms__select"
-                    <option value="">&#8593; По площади</option
-                    <option value="">&#8595; По площади</option
-                    <option value="">&#8593; По цене</option
-                    <option value="">&#8595; По цене</option
-                </select
-            </label>-->
+            <div class="rooms__block">
+                <div class="rooms__select select">
+                    <div class="select__value" onclick="selectOpen()">
+                        <div class="select__text"> &#8593; По площади</div>
+                        <img src="./images/arrow.svg" alt="▾" class="select__arrow">
+                    </div>
+                    <div class="select__options">
+                        <div class="select__option" onclick="selectChange('&#8593; По площади', 0)">
+                            <div class="select__text"> &#8593; По площади </div>
+                            <img src="./images/arrow-2.svg" alt="▾" class="select__arrow">
+                        </div>
+                        <div class="select__option" onclick="selectChange('&#8595; По площади', 1)">&#8595; По площади</div>
+                        <div class="select__option" onclick="selectChange('&#8593; По цене', 2)">&#8593; По цене</div>
+                        <div class="select__option" onclick="selectChange('&#8595; По цене', 3)">&#8595; По цене</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="rooms__container">
             <div class="rooms__panel panel">

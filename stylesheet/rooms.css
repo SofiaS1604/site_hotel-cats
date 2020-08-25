@@ -1,13 +1,48 @@
-.rooms__select {
+.rooms__select{
+    position: relative;
     width: 174px;
+    z-index: 2;
+}
+
+.select__value {
+    width: 134px;
     height: 35px;
-    font-size: 14px;
     border-radius: 25px;
+    background-color: white;
+    font-size: 15px;
     padding-left: 20px;
     padding-right: 20px;
     box-shadow: 0 2px 12px rgba(173, 152, 143, 0.2);
     border: 0;
     color: #1A212F;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select__options{
+    width: 134px;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.2);
+    border: 0;
+    font-size: 15px;
+    height: 139px;
+    color: #1A212F;
+    position: absolute;
+    background-color: white;
+    display: none;
+}
+
+.select__option{
+    height: 34.75px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .main__rooms {
