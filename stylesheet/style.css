@@ -17,8 +17,8 @@
 .page__header{
     display: grid;
     grid-auto-flow: column;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 98px;
+    margin-right: 98px;
     align-items: center;
     height: 75px;
 }
@@ -31,12 +31,10 @@
     display: grid;
     grid-auto-flow: column;
     justify-content: right;
-    margin-right: 33px;
+    grid-column-gap: 30px;
 }
 
 .navigation__item{
-    margin-left: 15px;
-    margin-right: 15px;
     list-style: none;
 }
 

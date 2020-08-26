@@ -1,3 +1,8 @@
+.main__rooms{
+    margin-left: 98px;
+    margin-right: 98px;
+}
+
 .rooms__select{
     position: relative;
     width: 174px;
@@ -45,11 +50,6 @@
     align-items: center;
 }
 
-.main__rooms {
-    padding-left: 98px;
-    padding-right: 98px;
-}
-
 .rooms__header {
     display: grid;
     grid-auto-flow: column;
@@ -58,6 +58,76 @@
 
 .rooms__container {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    grid-column-gap: 90px;
+}
+
+.rooms__panel{
+    display: grid;
+    grid-row-gap: 35px;
+    align-content: baseline;
+}
+
+.area__container, .equipment__container{
+    display: grid;
+    grid-row-gap: 15px;
+    font-size: 14px;
+}
+
+.price__container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+
+.price__input{
+    width: 86px;
+    padding: 2px 5px;
+}
+
+.area__input+.area__text, .equipment__input+.equipment__text{
+    margin-left: 10px;
+}
+
+.area__input, .equipment__input{
+    width: 20px;
+    height: 20px;
+}
+
+.area__label, .equipment__label{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.panel__buttons{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 15px;
+}
+
+.panel__button{
+    width: 185px;
+    cursor: pointer;
+    height: 42px;
+    font-size: 14px;
+    border-radius: 25px;
+}
+
+.button__apply{
+    background-color: #FAC663;
+    border: 0;
+}
+
+.button__clear{
+    background-color: white;
+    border: 2px solid #FAC663;
+}
+
+.area__title, .price__title, .equipment__title{
+    margin-bottom: 20px;
 }
 
 .rooms__title {
@@ -69,6 +139,7 @@
 
 .rooms__block {
     margin-left: auto;
+    margin-right: 9px;
 }
 
 .rooms__banner {

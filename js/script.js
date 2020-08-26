@@ -72,7 +72,6 @@ all('.navigation__link').forEach(el => {
     }, true)
 });
 
-
 function selectOpen() {
     $('.select__value').style.display = 'none';
     $('.select__options').style.display = 'block';

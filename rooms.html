@@ -44,10 +44,11 @@
                     </div>
                     <div class="select__options">
                         <div class="select__option" onclick="selectChange('&#8593; По площади', 0)">
-                            <div class="select__text"> &#8593; По площади </div>
+                            <div class="select__text"> &#8593; По площади</div>
                             <img src="./images/arrow-2.svg" alt="▾" class="select__arrow">
                         </div>
-                        <div class="select__option" onclick="selectChange('&#8595; По площади', 1)">&#8595; По площади</div>
+                        <div class="select__option" onclick="selectChange('&#8595; По площади', 1)">&#8595; По площади
+                        </div>
                         <div class="select__option" onclick="selectChange('&#8593; По цене', 2)">&#8593; По цене</div>
                         <div class="select__option" onclick="selectChange('&#8595; По цене', 3)">&#8595; По цене</div>
                     </div>
@@ -56,7 +57,71 @@
         </div>
         <div class="rooms__container">
             <div class="rooms__panel panel">
-
+                <div class="panel__price price">
+                    <div class="price__title">Цена за сутки, &#8381;</div>
+                    <div class="price__container">
+                        <input type="text" class="price__input" placeholder="от 100"/>
+                        <input type="text" class="price__input" placeholder="до 600"/>
+                    </div>
+                </div>
+                <div class="panel__area area">
+                    <div class="area__title">Площадь</div>
+                    <div class="area__container">
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">0,63 м<sup>2</sup></span>
+                        </label>
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">0,90 м<sup>2</sup></span>
+                        </label>
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">1,13 м<sup>2</sup></span>
+                        </label>
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">1,56 м<sup>2</sup></span>
+                        </label>
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">2,56 м<sup>2</sup></span>
+                        </label>
+                        <label class="area__label">
+                            <input type="checkbox" class="area__input"/>
+                            <span class="area__text">2,88 м<sup>2</sup></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="panel__equipment">
+                    <div class="equipment__title">Оснащение номера</div>
+                    <div class="equipment__container">
+                        <label class="equipment__label">
+                            <input type="checkbox" class="equipment__input"/>
+                            <span class="equipment__text">Пустой лежак</span>
+                        </label>
+                        <label class="equipment__label">
+                            <input type="checkbox" class="equipment__input"/>
+                            <span class="equipment__text">Лежак</span>
+                        </label>
+                        <label class="equipment__label">
+                            <input type="checkbox" class="equipment__input"/>
+                            <span class="equipment__text">Когтеточка</span>
+                        </label>
+                        <label class="equipment__label">
+                            <input type="checkbox" class="equipment__input"/>
+                            <span class="equipment__text">Игровой-комплекс</span>
+                        </label>
+                        <label class="equipment__label">
+                            <input type="checkbox" class="equipment__input"/>
+                            <span class="equipment__text">Домик</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="panel__buttons">
+                    <button class="panel__button button__apply">Применить</button>
+                    <button class="panel__button button__clear">Сбросить фильтр</button>
+                </div>
             </div>
             <div class="rooms__cards">
                 <div class="rooms__card card">
@@ -65,7 +130,7 @@
                         <div class="card__title">Эконом</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 90х70х180 см</p>
-                            <p class="card__line">Площадь - 0,63 м2</p>
+                            <p class="card__line">Площадь - 0,63 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
                                 <span class="line__block" data-title="Пустой номер">
@@ -86,7 +151,7 @@
                         <div class="card__title">Эконом плюс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 90х100х180 см</p>
-                            <p class="card__line">Площадь - 0,90 м2</p>
+                            <p class="card__line">Площадь - 0,90 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
                                 <span class="line__block" data-title="Когтедралка">
@@ -110,7 +175,7 @@
                         <div class="card__title">Комфорт</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 100х125х180 см</p>
-                            <p class="card__line">Площадь - 1,13 м2</p>
+                            <p class="card__line">Площадь - 1,13 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
                                 <span class="line__block" data-title="Когтедралка">
@@ -137,7 +202,7 @@
                         <div class="card__title">Сьют</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 125х125х180 см</p>
-                            <p class="card__line">Площадь - 1,56 м2</p>
+                            <p class="card__line">Площадь - 1,56 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
                                 <span class="line__block" data-title="Когтедралка">
@@ -164,7 +229,7 @@
                         <div class="card__title">Люкс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 160х160х180 см</p>
-                            <p class="card__line">Площадь - 2,56 м2</p>
+                            <p class="card__line">Площадь - 2,56 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
                                 <span class="line__block" data-title="Когтедралка">
@@ -194,7 +259,7 @@
                         <div class="card__title">Супер-Люкс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 180х160х180 см</p>
-                            <p class="card__line">Площадь - 2,88 м2</p>
+                            <p class="card__line">Площадь - 2,88 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера
                                 <span class="line__block" data-title="Когтедралка">
