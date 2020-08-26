@@ -84,15 +84,12 @@
 .price__input{
     width: 86px;
     padding: 2px 5px;
+    border: 1px solid #E1E1E1;
+    background-color: #FFFDFB;
 }
 
-.area__input+.area__text, .equipment__input+.equipment__text{
-    margin-left: 10px;
-}
-
-.area__input, .equipment__input{
-    width: 20px;
-    height: 20px;
+::-webkit-input-placeholder{
+    color: #1A212F;
 }
 
 .area__label, .equipment__label{
@@ -100,6 +97,39 @@
     grid-auto-flow: column;
     justify-content: start;
     align-items: center;
+}
+
+.area__input+.area__text, .equipment__input + .equipment__text {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.area__input+.area__text::before, .equipment__input + .equipment__text:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: #FFFDFB;
+    cursor: pointer;
+    border: 1px solid #E1E1E1;
+    margin-right: 10px;
+}
+
+.area__input, .equipment__input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.area__input:checked+.area__text::before, .equipment__input:checked + .equipment__text::before {
+    background-image: url("../images/checkbox.png");
+    background-size: cover;
+    border: 0;
+    width: 20px;
+    height: 20px;
 }
 
 .panel__buttons{

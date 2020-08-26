@@ -88,3 +88,15 @@ function selectChange(value, index) {
     $$('select__text', 0).innerText = value;
     $('.select__value').style.display = 'flex';
 }
+
+all('.price__input').forEach((el, index) => {
+    el.addEventListener('input', (e) => {
+        if(String(e.data) || Number(e.data)){
+            if(isNaN(parseFloat(e.data))){
+                el.value = el.value.slice(0, -1);
+            }
+        }
+
+        el.value = `${index === 0 ? 'от' : 'до'} ${e.target.value.split(' ')[1] ? e.target.value.split(' ')[1] : ''}`
+    });
+});
