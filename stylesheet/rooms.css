@@ -278,6 +278,10 @@
     font-weight: bolder;
 }
 
+.line__icon{
+    cursor: pointer;
+}
+
 .card__button {
     font-size: 14px;
     width: 230px;

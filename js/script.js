@@ -6,12 +6,7 @@ let i = 0,
     left = 100;
 
 let playSliderRooms = (type) => {
-    if (type === 'left') {
-        i = i === 0 ? 2 : i - 1;
-    } else {
-        i = i === 2 ? 0 : i + 1;
-    }
-
+    i = type === 'left' ? (i === 0 ? 2 : i - 1) : (i === 2 ? 0 : i + 1);
     $('.rooms__slid--active').style.opacity = 0;
 
     setTimeout(() => {
@@ -26,9 +21,9 @@ let playSliderRooms = (type) => {
 
 let playSliderReviews = (type) => {
     if (type === 'left') {
-        left = left === 100 ? 100 : left + 567
+        left = left === 100 ? 100 : left + 567;
     } else {
-        left = left === -1034 ? -1034 : left - 567
+        left = left === -1034 ? -1034 : left - 567;
     }
 
     $('.reviews__slider').style.marginLeft = left + 'px';
@@ -39,17 +34,14 @@ let playSliderReviews = (type) => {
 ymaps.ready(function () {
     var myMap = new ymaps.Map('map__block', {
         center: [59.938635, 30.323118],
-        zoom: 16.4
+        zoom: 16.4,
     });
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
-    }, {
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
         iconLayout: 'default#image',
         iconImageHref: 'images/cat.png',
         iconImageSize: [70, 100],
-        iconImageOffset: [-25, 0]
+        iconImageOffset: [-25, 0],
     }),
 
         myMap.geoObjects
@@ -66,37 +58,57 @@ all('.navigation__link').forEach(el => {
             window.scrollTo({
                 behavior: "smooth",
                 top: block.offsetTop,
-                left: 0
+                left: 0,
             })
         }
-    }, true)
+    })
 });
+
+function selectChange(value) {
+    let type = `${value}`.split(' По ')[1] === 'площади' ? 1 : 0;
+    let val = `${value}`.split(' По ')[0] === '↑' ? 1 : 0;
+    let rooms = [];
+
+    all('.rooms__card').forEach((el, index) => {
+        rooms[index] = {
+            el: el,
+            value: parseFloat(el.children[1].children[1].children[type ? 1 : 3].innerText.split(type ? ' - ' : ': ')[1])
+        }
+    });
+
+    rooms.sort((a, b) => val ? (a.value > b.value ? 1 : -1) : (a.value < b.value ? 1 : -1));
+    rooms.map((el, index) => el.el.style.order = index);
+}
 
 function selectOpen() {
     $('.select__value').style.display = 'none';
     $('.select__options').style.display = 'block';
 }
 
-function selectChange(value, index) {
-    $$('select__option', index).innerHTML = $$('select__option', 0).innerText;
-    $$('select__option', index).attributes[1].value = `selectChange("${$$('select__option', 0).innerText}", ${index})`
+function selectValue(value, index) {
+    if (index !== 0) {
+        $$('select__option', index).innerHTML = $$('select__option', 0).innerText;
+        selectChange(value);
 
-    $$('select__text', 1).innerText = value;
-    $$('select__option', 0).attributes[1].value = `selectChange("${value}", 0)`;
+        $$('select__option', index).attributes[1].value = `selectValue("${$$('select__option', 0).innerText}", ${index})`;
+        $$('select__option', 0).attributes[1].value = `selectValue("${value}", 0)`;
+
+        $$('select__text', 1).innerText = value;
+        $$('select__text', 0).innerText = value;
+    }
 
     $('.select__options').style.display = 'none';
-    $$('select__text', 0).innerText = value;
     $('.select__value').style.display = 'flex';
 }
 
 all('.price__input').forEach((el, index) => {
     el.addEventListener('input', (e) => {
-        if(String(e.data) || Number(e.data)){
-            if(isNaN(parseFloat(e.data))){
+        if (String(e.data) || Number(e.data)) {
+            if (isNaN(parseFloat(e.data))) {
                 el.value = el.value.slice(0, -1);
             }
         }
 
-        el.value = `${index === 0 ? 'от' : 'до'} ${e.target.value.split(' ')[1] ? e.target.value.split(' ')[1] : ''}`
+        el.value = `${index === 0 ? 'от' : 'до'} ${e.target.value.split(' ')[1] ? e.target.value.split(' ')[1] : ''}`;
     });
 });

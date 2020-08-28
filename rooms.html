@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Котейка</title>
+    <link rel="icon" href="./images/icon_url.png">
     <link rel="stylesheet" href="./stylesheet/style.css">
     <link rel="stylesheet" href="./stylesheet/rooms.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
@@ -43,14 +44,14 @@
                         <img src="./images/arrow.svg" alt="▾" class="select__arrow">
                     </div>
                     <div class="select__options">
-                        <div class="select__option" onclick="selectChange('&#8593; По площади', 0)">
+                        <div class="select__option" onclick="selectValue('&#8593; По площади', 0)">
                             <div class="select__text"> &#8593; По площади</div>
                             <img src="./images/arrow-2.svg" alt="▾" class="select__arrow">
                         </div>
-                        <div class="select__option" onclick="selectChange('&#8595; По площади', 1)">&#8595; По площади
+                        <div class="select__option" onclick="selectValue('&#8595; По площади', 1)">&#8595; По площади
                         </div>
-                        <div class="select__option" onclick="selectChange('&#8593; По цене', 2)">&#8593; По цене</div>
-                        <div class="select__option" onclick="selectChange('&#8595; По цене', 3)">&#8595; По цене</div>
+                        <div class="select__option" onclick="selectValue('&#8593; По цене', 2)">&#8593; По цене</div>
+                        <div class="select__option" onclick="selectValue('&#8595; По цене', 3)">&#8595; По цене</div>
                     </div>
                 </div>
             </div>
@@ -69,27 +70,27 @@
                     <div class="area__container">
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">0,63 м<sup>2</sup></span>
+                            <span class="area__text">0.63 м<sup>2</sup></span>
                         </label>
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">0,90 м<sup>2</sup></span>
+                            <span class="area__text">0.90 м<sup>2</sup></span>
                         </label>
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">1,13 м<sup>2</sup></span>
+                            <span class="area__text">1.13 м<sup>2</sup></span>
                         </label>
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">1,56 м<sup>2</sup></span>
+                            <span class="area__text">1.56 м<sup>2</sup></span>
                         </label>
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">2,56 м<sup>2</sup></span>
+                            <span class="area__text">2.56 м<sup>2</sup></span>
                         </label>
                         <label class="area__label">
                             <input type="checkbox" class="area__input"/>
-                            <span class="area__text">2,88 м<sup>2</sup></span>
+                            <span class="area__text">2.88 м<sup>2</sup></span>
                         </label>
                     </div>
                 </div>
@@ -98,7 +99,7 @@
                     <div class="equipment__container">
                         <label class="equipment__label">
                             <input type="checkbox" class="equipment__input"/>
-                            <span class="equipment__text">Пустой лежак</span>
+                            <span class="equipment__text">Пустой номер</span>
                         </label>
                         <label class="equipment__label">
                             <input type="checkbox" class="equipment__input"/>
@@ -130,10 +131,10 @@
                         <div class="card__title">Эконом</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 90х70х180 см</p>
-                            <p class="card__line">Площадь - 0,63 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 0.63 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
-                                <span class="line__block" data-title="Пустой лежак">
+                                <span class="line__block" data-title="Пустой номер">
                                     <img class="line__icon" src="./images/icon-1.png" alt="">
                                 </span>
                             </p>
@@ -151,13 +152,13 @@
                         <div class="card__title">Эконом плюс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 90х100х180 см</p>
-                            <p class="card__line">Площадь - 0,90 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 0.90 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
-                                <span class="line__block" data-title="Когтеточка">
+                                <span class="line__block" data-title="Лежак">
                                     <img class="line__icon" src="./images/icon-2.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Лежанка">
+                                <span class="line__block" data-title="Когтеточка">
                                     <img class="line__icon" src="./images/icon-3.png" alt="">
                                 </span>
                             </p>
@@ -175,16 +176,16 @@
                         <div class="card__title">Комфорт</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 100х125х180 см</p>
-                            <p class="card__line">Площадь - 1,13 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 1.13 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
-                                <span class="line__block" data-title="Когтеточка">
+                                <span class="line__block" data-title="Лежак">
                                     <img class="line__icon" src="./images/icon-2.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой-комплекс">
+                                <span class="line__block" data-title="Когтеточка">
                                     <img class="line__icon" src="./images/icon-3.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой комплекс">
+                                <span class="line__block" data-title="Игровой-комплекс">
                                     <img class="line__icon" src="./images/icon-4.png" alt="">
                                 </span>
                             </p>
@@ -202,13 +203,13 @@
                         <div class="card__title">Сьют</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 125х125х180 см</p>
-                            <p class="card__line">Площадь - 1,56 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 1.56 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
-                                <span class="line__block" data-title="Когтеточка">
+                                <span class="line__block" data-title="Лежак">
                                     <img class="line__icon" src="./images/icon-2.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой-комплекс">
+                                <span class="line__block" data-title="Когтеточка">
                                     <img class="line__icon" src="./images/icon-3.png" alt="">
                                 </span>
                                 <span class="line__block" data-title="Игровой комплекс">
@@ -229,16 +230,16 @@
                         <div class="card__title">Люкс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 160х160х180 см</p>
-                            <p class="card__line">Площадь - 2,56 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 2.56 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера:
-                                <span class="line__block" data-title="Когтеточка">
+                                <span class="line__block" data-title="Лежак">
                                     <img class="line__icon" src="./images/icon-2.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой-комплекс">
+                                <span class="line__block" data-title="Когтеточка">
                                     <img class="line__icon" src="./images/icon-3.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой комплекс">
+                                <span class="line__block" data-title="Игровой-комплекс">
                                     <img class="line__icon" src="./images/icon-4.png" alt="">
                                 </span>
                                 <span class="line__block" data-title="Домик">
@@ -259,16 +260,16 @@
                         <div class="card__title">Супер-Люкс</div>
                         <div class="card__text">
                             <p class="card__line">Размеры (ШхГхВ) - 180х160х180 см</p>
-                            <p class="card__line">Площадь - 2,88 м<sup>2</sup></p>
+                            <p class="card__line">Площадь - 2.88 м<sup>2</sup></p>
                             <p class="card__line line">
                                 Оснащение номера
-                                <span class="line__block" data-title="Когтеточка">
+                                <span class="line__block" data-title="Лежак">
                                     <img class="line__icon" src="./images/icon-2.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой-комплекс">
+                                <span class="line__block" data-title="Когтеточка">
                                     <img class="line__icon" src="./images/icon-3.png" alt="">
                                 </span>
-                                <span class="line__block" data-title="Игровой комплекс">
+                                <span class="line__block" data-title="Игровой-комплекс">
                                     <img class="line__icon" src="./images/icon-4.png" alt="">
                                 </span>
                                 <span class="line__block" data-title="Домик">
