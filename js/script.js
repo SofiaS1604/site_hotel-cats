@@ -2,8 +2,7 @@ const $ = el => document.querySelector(el),
     $$ = (el, key) => document.getElementsByClassName(el)[key],
     all = el => document.querySelectorAll(el);
 
-let i = 0,
-    left = 100;
+let i = 0;
 
 let playSliderRooms = (type) => {
     i = type === 'left' ? (i === 0 ? 2 : i - 1) : (i === 2 ? 0 : i + 1);
@@ -20,6 +19,8 @@ let playSliderRooms = (type) => {
 };
 
 let playSliderReviews = (type) => {
+    let left = 100;
+
     if (type === 'left') {
         left = left === 100 ? 100 : left + 567;
     } else {
@@ -65,9 +66,9 @@ all('.navigation__link').forEach(el => {
 });
 
 function selectChange(value) {
-    let type = `${value}`.split(' По ')[1] === 'площади' ? 1 : 0;
-    let val = `${value}`.split(' По ')[0] === '↑' ? 1 : 0;
-    let rooms = [];
+    let type = `${value}`.split(' По ')[1] === 'площади' ? 1 : 0,
+        val = `${value}`.split(' По ')[0] === '↑' ? 1 : 0,
+        rooms = [];
 
     all('.rooms__card').forEach((el, index) => {
         rooms[index] = {

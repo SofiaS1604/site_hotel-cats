@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Котейка</title>
+    <link rel="stylesheet" href="./stylesheet/room.css">
+
+    <link rel="icon" href="./images/icon_url.png">
+    <link rel="stylesheet" href="./stylesheet/style.css">
+    <link rel="stylesheet" href="./stylesheet/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=71cdf11b-24e2-49e6-952c-706a8162b6fd&lang=ru_RU"
+            type="text/javascript"></script>
+</head>
+<body class="page">
+<header class="page__header header">
+    <a href="./index.html" class="header__logo">
+        <img src="./images/logo.png" alt="Logo" class="logo__image"/>
+    </a>
+    <nav class="header__navigation navigation">
+        <ul class="navigation__container">
+            <li class="navigation__item">
+                <a href="./index.html#advantages" class="navigation__link">Почему мы?</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#rooms" class="navigation__link">Номера</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#reviews" class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#map" class="navigation__link">Как нас найти</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="page__main main">
+    <div class="main__room room">
+        <div class="room__gallery gallery">
+            <div class="gallery__container">
+                <img onclick="changeGallery(0)" class="gallery__image" src="./images/room_1.jpg"/>
+                <img onclick="changeGallery(1)" class="gallery__image" src="./images/room_2.jpg"/>
+                <img onclick="changeGallery(2)" class="gallery__image" src="./images/room_3.jpg"/>
+            </div>
+            <img class="gallery__image" src="./images/room-6.jpg" alt="Главная картинка"/>
+        </div>
+        <div class="room__information information">
+            <div class="information__title">Супер-Люкс</div>
+            <div class="information__text">
+                <p class="information__line">Размеры (ШхГхВ) - 180х160х180 см</p>
+                <p class="information__line">Площадь - 2.88 м<sup>2</sup></p>
+                <p class="information__line line">
+                    Оснащение номера:
+                    <span class="line__block">Лежак</span>
+                    <span class="line__block">Домик</span>
+                    <span class="line__block">Игровой комплекс - 3 яруса</span>
+                    <span class="line__block">Когтеточка</span>
+                </p>
+                <p class="information__line line">
+                    Цена за сутки:
+                    <span class="line__bold">600 &#8381;</span>
+                </p>
+            </div>
+            <button class="information__button">Забронировать</button>
+        </div>
+    </div>
+    <div id="rooms" class="main__rooms rooms">
+        <div class="rooms__title">Другие номера</div>
+        <div class="rooms__slider">
+            <div class="rooms__slid rooms__slid--active slid">
+                <div class="slid__image"></div>
+                <div class="slid__container">
+                    <div class="slid__title">Эконом плюс</div>
+                    <ul class="slid__list">
+                        <li class="slid__item">Площадь - 0,90 м<sup>2</sup></li>
+                        <li class="slid__item">Размеры (Ш&#215;Г&#215;В) - 90&#215;100&#215;180 см</li>
+                        <li class="slid__item">Цена за сутки: 200&#8381;</li>
+                    </ul>
+                    <a href="./rooms.html" class="slid__button">Забронировать</a>
+                </div>
+            </div>
+            <div class="rooms__slid slid">
+                <div class="slid__image"></div>
+                <div class="slid__container">
+                    <div class="slid__title">Комфорт</div>
+                    <ul class="slid__list">
+                        <li class="slid__item">Площадь - 1,13 м<sup>2</sup></li>
+                        <li class="slid__item">Размеры (Ш&#215;Г&#215;В) - 100&#215;125&#215;180 см</li>
+                        <li class="slid__item">Цена за сутки: 250&#8381;</li>
+                    </ul>
+                    <a class="slid__button">Забронировать</a>
+                </div>
+            </div>
+            <div class="rooms__slid slid">
+                <div class="slid__image"></div>
+                <div class="slid__container">
+                    <div class="slid__title">Сьют</div>
+                    <ul class="slid__list">
+                        <li class="slid__item">Площадь - 1,56 м<sup>2</sup></li>
+                        <li class="slid__item">Размеры (Ш&#215;Г&#215;В) - 125&#215;125&#215;180 см</li>
+                        <li class="slid__item">Цена за сутки: 350&#8381;</li>
+                    </ul>
+                    <a class="slid__button">Забронировать</a>
+                </div>
+            </div>
+        </div>
+        <div class="rooms__container">
+            <div class="rooms__points">
+                <div class="rooms__point rooms__point--active"></div>
+                <div class="rooms__point"></div>
+                <div class="rooms__point"></div>
+            </div>
+            <div class="rooms__arrows">
+                <div class="rooms__arrow rooms__arrow--left" onclick="playSliderRooms('left')"> <</div>
+                <div class="rooms__arrow rooms__arrow--right" onclick="playSliderRooms('right')"> ></div>
+            </div>
+        </div>
+    </div>
+    <div class="main__map map" id="map">
+        <div class="map__container">
+            <div class="map__title">Как нас найти</div>
+            <div class="map__address">
+                <div class="map__caption">Адрес</div>
+                Санкт-Петербург, <br>
+                ул Большая Конюшенная, д 19
+            </div>
+            <div class="map__mode">
+                <div class="map__caption">Режи работы</div>
+                Ежедневно, с 9:00 до 20:00
+            </div>
+            <div class="map__phone">
+                <div class="map__caption">Телефон</div>
+                8 (800) 333-55-99
+            </div>
+            <div class="map__mail">
+                <div class="map__caption">E-mail</div>
+                info@cat-hotel.ru
+            </div>
+            <div class="map__networks networks">
+                <div class="map__caption">Социальные сети</div>
+                <div class="networks__icons">
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                </div>
+            </div>
+        </div>
+        <div id="map__block"></div>
+    </div>
+    <div class="main__window window">
+        <div class="window__reservation reservation">
+            <img class="reservation__cross" src="./images/cross.png"/>
+            <div class="reservation__title">Забронировать номер</div>
+            <div class="reservation__form">
+                <label class="reservation__label">
+                    <input type="text" class="reservation__input" placeholder="Ваше имя"/>
+                </label>
+                <label class="reservation__label">
+                    <input type="text" class="reservation__input" placeholder="Имя питомца"/>
+                </label>
+                <label class="reservation__label">
+                    <input type="text" class="reservation__input" placeholder="Телефон"/>
+                </label>
+                <label class="reservation__label">
+                    <input type="text" class="reservation__input" placeholder="E-mail"/>
+                </label>
+                <label class="reservation__label reservation__label--date">
+                    Дата заезда: c
+                    <input type="text" class="reservation__input" placeholder="E-mail"/>
+                    по
+                    <input type="text" class="reservation__input" placeholder="E-mail"/>
+                </label>
+            </div>
+            <button class="reservation__button" type="button">Отправить заявку</button>
+        </div>
+        <div class="window__reservation reservation">
+
+        </div>
+    </div>
+</main>
+<footer class="page__footer footer">
+    <a href="./index.html" class="header__logo">
+        <img src="./images/logo.png" alt="Logo" class="logo__image"/>
+    </a>
+    <nav class="footer__navigation navigation">
+        <ul class="navigation__container">
+            <li class="navigation__item">
+                <a href="./index.html#advantages" class="navigation__link">Почему мы?</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#rooms" class="navigation__link">Номера</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#reviews" class="navigation__link">Отзывы</a>
+            </li>
+            <li class="navigation__item">
+                <a href="./index.html#map" class="navigation__link">Как нас найти</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+<script src="./js/script.js"></script>
+</body>
+</html>

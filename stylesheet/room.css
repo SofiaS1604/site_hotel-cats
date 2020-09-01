@@ -1,0 +1,420 @@
+.page__main {
+    position: relative;
+}
+
+.page__main:before {
+    content: "";
+    display: block;
+    background-image: url("../images/big_paw-3.png");
+    background-size: cover;
+    width: 335px;
+    height: 405px;
+    position: absolute;
+    right: -55px;
+    top: -20px;
+}
+
+.main__room {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
+    grid-column-gap: 70px;
+    margin: 70px 98px 72px;
+}
+
+.room__gallery {
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+    grid-template-columns: 70px 500px;
+}
+
+.gallery__image {
+    width: 500px;
+    height: 396px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.gallery__container .gallery__image {
+    width: 70px;
+    height: 112px;
+    filter: opacity(0.5);
+}
+
+.gallery__container {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-rows: repeat(3, 112px);
+}
+
+.information__title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 23px;
+}
+
+.information__text {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 16px;
+}
+
+.information__line:nth-child(3) {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 10px;
+}
+
+.line__block:nth-child(1) {
+    margin-top: 4px;
+}
+
+.line__block {
+    display: flex;
+    align-items: center;
+}
+
+.line__block:nth-child(1):before {
+    content: "";
+    display: block;
+    background-image: url("../images/icon-2.png");
+    background-size: cover;
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+.line__block:nth-child(2):before {
+    content: "";
+    display: block;
+    background-image: url("../images/icon-5.png");
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.line__block:nth-child(3):before {
+    content: "";
+    display: block;
+    background-image: url("../images/icon-4.png");
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.line__block:nth-child(4):before {
+    content: "";
+    display: block;
+    background-image: url("../images/icon-3.png");
+    background-size: cover;
+    width: 14px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.line__bold {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.main__rooms {
+    padding-top: 70px;
+    position: relative;
+    padding-bottom: 65px;
+}
+
+.main__rooms:before {
+    content: '';
+    background-image: url("../images/fish.png");
+    height: 151px;
+    width: 484px;
+    display: block;
+    position: absolute;
+    left: 0;
+    background-size: cover;
+    top: 80px;
+    z-index: 0;
+}
+
+.rooms__title {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+.slid__image {
+    width: 600px;
+    height: 404px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.rooms__slid:nth-child(1) .slid__image {
+    background-image: url("../images/slid_image-1.jpg");
+}
+
+.rooms__slid:nth-child(2) .slid__image {
+    background-image: url("../images/slid_image-2.jpg");
+}
+
+.rooms__slid:nth-child(3) .slid__image {
+    background-image: url("../images/slid_image-3.jpg");
+}
+
+.rooms__slider {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1030px;
+    height: 404px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 70px;
+}
+
+.rooms__slid {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: -600px;
+    transition: 0.8s all ease-in-out;
+}
+
+.rooms__slid--active {
+    z-index: 1;
+}
+
+.slid__container {
+    margin-left: 1100px;
+    width: 293px;
+    height: 204px;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
+    background-color: white;
+    padding: 40px 95px;
+    transition: 0.8s all ease-in-out;
+}
+
+.rooms__slid--active .slid__container {
+    margin-left: -70px;
+}
+
+.slid__title {
+    font-size: 21px;
+    font-weight: bolder;
+}
+
+.slid__list {
+    margin-top: 15px;
+    font-size: 16px;
+    list-style: url("../images/list_marker.png") inside;
+}
+
+.slid__item {
+    margin-bottom: 10px;
+}
+
+.slid__button, .information__button {
+    margin-top: 30px;
+    font-size: 15px;
+    width: 206px;
+    padding: 7px 0;
+    border-radius: 25px;
+    border: 0;
+    justify-items: end;
+    cursor: pointer;
+    background-color: #FF7236;
+    color: white;
+    display: grid;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: 1fr 60px;
+    text-decoration: none;
+}
+
+.slid__button:after, .information__button:after, .reservation__button:after {
+    content: '';
+    background-image: url(../images/paw_orange.png);
+    height: 36px;
+    width: 36px;
+    display: block;
+    margin-right: 7px;
+}
+
+.information__button {
+    margin-top: 23px;
+}
+
+.rooms__slid--active {
+    left: 0;
+}
+
+.rooms__container, .reviews__container {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.rooms__points, .reviews__points {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-column-gap: 12px;
+    margin-left: 120px;
+}
+
+.rooms__point, .reviews__point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E1E1E1;
+}
+
+.rooms__point--active, .reviews__point--active {
+    background-color: #FAC663;
+}
+
+.rooms__arrows {
+    display: flex;
+    z-index: 2;
+}
+
+.rooms__arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #FF7236;
+    font-size: 21px;
+    box-shadow: 0 2px 12px rgba(173, 152, 143, 0.25);
+}
+
+.rooms__arrow + .rooms__arrow {
+    margin-left: 10px;
+}
+
+.main__map {
+    margin-top: 75px !important;
+}
+
+.main__window {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(255, 254, 253, 0.8);
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+
+.window__reservation:before{
+    display: block;
+    content: '';
+    background-image: url("../images/big_paw-4.png");
+    background-size: cover;
+    width: 137px;
+    position: absolute;
+    height: 144px;
+    left: -20px;
+    top: -25px;
+}
+
+.window__reservation{
+    margin-top: calc((100vh - 650px) / 2);
+    width: 490px;
+    height: 570px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: calc((100vw - 570px) / 2);
+    padding: 40px 40px;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(153, 153, 153, 0.25);
+}
+
+.reservation__title{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reservation__cross{
+    margin-left: auto;
+    display: grid;
+    margin-bottom: 14px;
+}
+
+.reservation__form{
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+
+.reservation__label{
+    width: 430px;
+}
+
+.reservation__input{
+    padding: 17px 30px;
+    font-size: 16px;
+    width: 368px;
+    height: 16px;
+    border-radius: 25px;
+    border: 1px solid #D7D7D7;
+}
+
+.reservation__input::-webkit-input-placeholder{
+    color: #1A212F;
+}
+
+.reservation__label--date .reservation__input:nth-child(1){
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.reservation__label--date .reservation__input:nth-child(2){
+    margin-left: 12px;
+}
+
+.reservation__label--date .reservation__input{
+    width: 67px;
+}
+
+.reservation__button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    font-size: 16px;
+    width: 230px;
+    padding: 7px 0;
+    border-radius: 25px;
+    border: 0;
+    justify-items: end;
+    cursor: pointer;
+    background-color: #FF7236;
+    color: white;
+    display: grid;
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: 1fr 60px;
+    text-decoration: none;
+}
