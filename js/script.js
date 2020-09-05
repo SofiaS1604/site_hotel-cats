@@ -3,6 +3,17 @@ const $ = el => document.querySelector(el),
     all = el => document.querySelectorAll(el);
 
 let i = 0;
+const roomInfo = [
+    {
+        id: 1,
+        title: 'Эконом',
+        info: [
+            'Размеры (ШхГхВ) - 90х70х180 см',
+            'Площадь - 0.63 м <sup>2</sup>',
+
+        ]
+    }
+];
 
 let playSliderRooms = (type) => {
     i = type === 'left' ? (i === 0 ? 2 : i - 1) : (i === 2 ? 0 : i + 1);
@@ -113,3 +124,20 @@ all('.price__input').forEach((el, index) => {
         el.value = `${index === 0 ? 'от' : 'до'} ${e.target.value.split(' ')[1] ? e.target.value.split(' ')[1] : ''}`;
     });
 });
+
+function submitReservation() {
+    let errors = 0;
+    all('.reservation__input').forEach(el => {
+        !el.value.length || !el.value ? errors++ : 0;
+        el.style.borderColor = !el.value.length || !el.value ? 'crimson' : '#D7D7D7'
+    });
+
+    if (errors === 0) {
+        $('.window__reservation').style.display = 'none';
+        $('.window__confirmation').style.display = 'block'
+    }
+}
+
+function loadRoom() {
+
+}

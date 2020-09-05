@@ -219,7 +219,7 @@
     margin-bottom: 10px;
 }
 
-.slid__button, .information__button {
+.slid__button, .information__button, .reservation__button, .confirmation__button{
     margin-top: 30px;
     font-size: 15px;
     width: 206px;
@@ -238,7 +238,7 @@
     text-decoration: none;
 }
 
-.slid__button:after, .information__button:after, .reservation__button:after {
+.slid__button:after, .information__button:after, .reservation__button:after, .confirmation__button:after {
     content: '';
     background-image: url(../images/paw_orange.png);
     height: 36px;
@@ -320,9 +320,10 @@
     overflow: hidden;
     top: 0;
     z-index: 1;
+    display: none;
 }
 
-.window__reservation:before{
+.window__reservation:before, .window__confirmation:before{
     display: block;
     content: '';
     background-image: url("../images/big_paw-4.png");
@@ -330,11 +331,20 @@
     width: 137px;
     position: absolute;
     height: 144px;
+}
+
+.window__reservation:before{
     left: -20px;
     top: -25px;
 }
 
-.window__reservation{
+.window__confirmation:before{
+    left: -10px;
+    bottom: -15px;
+    transform: rotate(-100deg);
+}
+
+.window__reservation, .window__confirmation{
     margin-top: calc((100vh - 650px) / 2);
     width: 490px;
     height: 570px;
@@ -347,7 +357,12 @@
     box-shadow: 0 0 25px rgba(153, 153, 153, 0.25);
 }
 
-.reservation__title{
+.window__confirmation{
+    height: 189px;
+    margin-top: calc((100vh - 269px) / 2);
+}
+
+.reservation__title, .confirmation__title{
     font-size: 28px;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
@@ -357,6 +372,7 @@
 
 .reservation__cross{
     margin-left: auto;
+    cursor: pointer;
     display: grid;
     margin-bottom: 14px;
 }
@@ -377,12 +393,22 @@
     font-size: 16px;
     width: 368px;
     height: 16px;
+    outline: none;
     border-radius: 25px;
     border: 1px solid #D7D7D7;
 }
 
 .reservation__input::-webkit-input-placeholder{
     color: #1A212F;
+}
+
+.reservation__label--date .reservation__input::-webkit-input-placeholder{
+    color: #B5B5B5;
+}
+
+.reservation__label--date .reservation__input{
+    padding: 17px 20px;
+    width: 87px;
 }
 
 .reservation__label--date .reservation__input:nth-child(1){
@@ -394,27 +420,28 @@
     margin-left: 12px;
 }
 
-.reservation__label--date .reservation__input{
-    width: 67px;
-}
-
 .reservation__button{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
     font-size: 16px;
     width: 230px;
-    padding: 7px 0;
-    border-radius: 25px;
-    border: 0;
-    justify-items: end;
-    cursor: pointer;
-    background-color: #FF7236;
-    color: white;
-    display: grid;
-    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
-    grid-auto-flow: column;
-    align-items: center;
-    grid-template-columns: 1fr 60px;
-    text-decoration: none;
+}
+
+.confirmation__button{
+    width: 122px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.window__confirmation{
+    display: none;
+}
+
+.confirmation__text{
+    text-align: center;
+}
+
+.confirmation__title{
+    margin-bottom: 25px;
 }

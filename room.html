@@ -15,7 +15,7 @@
     <script src="https://api-maps.yandex.ru/2.1/?apikey=71cdf11b-24e2-49e6-952c-706a8162b6fd&lang=ru_RU"
             type="text/javascript"></script>
 </head>
-<body class="page">
+<body class="page" onload="loadRoom()">
 <header class="page__header header">
     <a href="./index.html" class="header__logo">
         <img src="./images/logo.png" alt="Logo" class="logo__image"/>
@@ -41,9 +41,9 @@
     <div class="main__room room">
         <div class="room__gallery gallery">
             <div class="gallery__container">
-                <img onclick="changeGallery(0)" class="gallery__image" src="./images/room_1.jpg"/>
-                <img onclick="changeGallery(1)" class="gallery__image" src="./images/room_2.jpg"/>
-                <img onclick="changeGallery(2)" class="gallery__image" src="./images/room_3.jpg"/>
+                <img class="gallery__image" src="./images/room_1.jpg"/>
+                <img class="gallery__image" src="./images/room_2.jpg"/>
+                <img class="gallery__image" src="./images/room_3.jpg"/>
             </div>
             <img class="gallery__image" src="./images/room-6.jpg" alt="Главная картинка"/>
         </div>
@@ -64,7 +64,7 @@
                     <span class="line__bold">600 &#8381;</span>
                 </p>
             </div>
-            <button class="information__button">Забронировать</button>
+            <button class="information__button" onclick="$('.main__window').style.display = 'block'">Забронировать</button>
         </div>
     </div>
     <div id="rooms" class="main__rooms rooms">
@@ -152,7 +152,7 @@
     </div>
     <div class="main__window window">
         <div class="window__reservation reservation">
-            <img class="reservation__cross" src="./images/cross.png"/>
+            <img onclick="$('.main__window').style.display = 'none'" class="reservation__cross" src="./images/cross.png"/>
             <div class="reservation__title">Забронировать номер</div>
             <div class="reservation__form">
                 <label class="reservation__label">
@@ -169,15 +169,18 @@
                 </label>
                 <label class="reservation__label reservation__label--date">
                     Дата заезда: c
-                    <input type="text" class="reservation__input" placeholder="E-mail"/>
+                    <input type="text" class="reservation__input" placeholder="26.01.2020"/>
                     по
-                    <input type="text" class="reservation__input" placeholder="E-mail"/>
+                    <input type="text" class="reservation__input" placeholder="26.02.2020"/>
                 </label>
             </div>
-            <button class="reservation__button" type="button">Отправить заявку</button>
+            <button class="reservation__button" onclick="submitReservation()" type="button">Отправить заявку</button>
         </div>
-        <div class="window__reservation reservation">
-
+        <div class="window__confirmation confirmation">
+            <img onclick="$('.window__reservation').style.display = 'block'; $('.window__confirmation').style.display = 'none'" class="reservation__cross" src="./images/cross.png"/>
+            <div class="confirmation__title">Спасибо за заявку!</div>
+            <div class="confirmation__text">Мы свяжемся с вами в ближайшее время</div>
+            <button class="confirmation__button" onclick="$('.main__window').style.display = 'none'" type="button">Ok</button>
         </div>
     </div>
 </main>
