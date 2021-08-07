@@ -2,6 +2,9 @@ const $ = el => document.querySelector(el),
     $$ = (el, key) => document.getElementsByClassName(el)[key],
     all = el => document.querySelectorAll(el);
 
+let left = 100;
+
+
 let i = 0;
 const roomInfo = [
     {
@@ -30,8 +33,6 @@ let playSliderRooms = (type) => {
 };
 
 let playSliderReviews = (type) => {
-    let left = 100;
-
     if (type === 'left') {
         left = left === 100 ? 100 : left + 567;
     } else {
@@ -136,8 +137,4 @@ function submitReservation() {
         $('.window__reservation').style.display = 'none';
         $('.window__confirmation').style.display = 'block'
     }
-}
-
-function loadRoom() {
-
 }
