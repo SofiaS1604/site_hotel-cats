@@ -409,7 +409,7 @@
     }
 }
 
-@media screen and (min-width: 767px) and (max-width: 991px){
+@media screen and (min-width: 700px) and (max-width: 991px){
    .page__header{
        margin-left: 45px;
        margin-right: 45px;
@@ -556,5 +556,257 @@
     .page__footer{
         padding-left: 45px;
         padding-right: 45px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px){
+    .page__header, .page__footer{
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .main__full-screen{
+        background-position: center;
+        background-image: url("../images/full_screen.jpg");
+        align-items: start;
+        justify-content: center;
+        margin-bottom: 0;
+        height: 700px;
+    }
+
+    .full-screen__content{
+        margin-left: 0;
+        margin-top: 120px;
+        display: grid;
+        justify-items: center;
+    }
+
+    .full-screen__title{
+        margin: 5px 0 10px;
+    }
+
+    .advantages__card{
+        padding: 25px;
+        width: 240px;
+        height: auto;
+    }
+
+    .advantages__card .card__title{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .advantages__card .card__text{
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        width: auto;
+    }
+
+    .advantages__card .card__icon{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 30px;
+    }
+
+    .advantages__container{
+        grid-template-columns: repeat(auto-fit, 290px);
+        margin-top: 40px;
+    }
+
+    .main__advantages{
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+
+    .main__advantages:after{
+        width: 300px;
+        height: 325px;
+        right: -30px;
+    }
+
+    .slid__image{
+        width: 442px;
+        height: 326px;
+    }
+    .slid__container{
+        padding: 40px;
+        width: 263px;
+        height: 197px;
+    }
+
+    .slid__title{
+        font-size: 20px;
+    }
+
+    .slid__list{
+        font-size: 15px;
+        list-style: url("../images/list_marker2.png") inside;
+    }
+    .rooms__slider, .rooms__container, .reviews__container{
+        width: 406px;
+    }
+
+    .rooms__slider{
+        margin-top: 40px;
+        height: 570px;
+    }
+
+    .rooms__slid--active .slid__container{
+        margin-left: 0;
+    }
+
+    .slid__container{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 326px;
+    }
+
+    .rooms__slid{
+        flex-direction: column;
+    }
+
+    .slid__image{
+        width: 406px;
+        height: 269px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .main__rooms:before{
+        width: 339px;
+        height: 106px;
+        top: 120px;
+    }
+
+    .main__rooms{
+        padding-bottom: 0;
+    }
+
+    .rooms__arrows, .reviews__arrows{
+        display: none;
+    }
+
+    .main__rooms, .main__reviews{
+        padding-top: 60px;
+    }
+
+    .main__reviews:after{
+        width: 227px;
+        height: 260px;
+        top: -30px;
+    }
+
+    .reviews__slider{
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+
+    .reviews__slid{
+        width: 372px;
+        padding: 30px;
+        height: 140px;
+    }
+
+    .slid__info{
+        margin-top: 15px;
+    }
+
+    .map__container{
+        padding-left: 45px;
+        padding-right: 45px;
+        width: 279px;
+    }
+
+    #map__block{
+        width: calc(100vw - 369px);
+    }
+
+    .main__map{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 576px) {
+    .main__full-screen{
+        height: 500px;
+    }
+
+    .full-screen__content{
+        margin-top: 50px;
+    }
+
+    .full-screen__caption{
+        font-size: 12px;
+    }
+
+    .full-screen__title{
+        font-size: 44px;
+    }
+
+    .full-screen__text{
+        font-size: 16px;
+    }
+
+    .advantages__title, .reviews__title, .rooms__title, .map__title{
+        font-size: 28px;
+    }
+
+    .slid__image{
+        width: 290px;
+        height: 192px;
+    }
+
+    .slid__container{
+        width: 210px;
+        height: auto;
+    }
+
+    .rooms__slider, .rooms__container, .reviews__container{
+        width: 290px;
+    }
+
+    .main__map{
+        grid-auto-flow: row;
+    }
+
+    #map__block{
+        width: 100vw;
+        height: 300px;
+    }
+
+    .page__footer{
+        grid-auto-flow: row;
+        height: auto;
+        justify-content: left;
+        padding-top: 15px;
+    }
+
+    .footer__navigation{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .footer__navigation .navigation__container{
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 5px;
+    }
+
+    .main__advantages:after, .main__reviews:after{
+        width: 112px;
+        height: 130px;
+        top: 30px;
+        right: -10px;
+    }
+
+    .main__rooms:before{
+        width: 150px;
+        height: 40px;
+        top: 105px;
+    }
+
+    .header__navigation{
+        display: none;
     }
 }
