@@ -410,11 +410,6 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 991px){
-   .page__header{
-       margin-left: 45px;
-       margin-right: 45px;
-   }
-
     .main__full-screen{
         height: 868px;
         background-image: url("../images/full_screen.jpg");
@@ -538,35 +533,9 @@
     .slid__info{
         margin-top: 15px;
     }
-
-    .map__container{
-        padding-left: 45px;
-        padding-right: 45px;
-        width: 279px;
-    }
-
-    #map__block{
-        width: calc(100vw - 369px);
-    }
-
-    .main__map{
-        margin-top: 120px;
-    }
-
-    .page__footer{
-        padding-left: 45px;
-        padding-right: 45px;
-    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 700px){
-    .page__header, .page__footer{
-        margin-left: 15px;
-        margin-right: 15px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .main__full-screen{
         background-position: center;
         background-image: url("../images/full_screen.jpg");
@@ -713,20 +682,6 @@
     .slid__info{
         margin-top: 15px;
     }
-
-    .map__container{
-        padding-left: 45px;
-        padding-right: 45px;
-        width: 279px;
-    }
-
-    #map__block{
-        width: calc(100vw - 369px);
-    }
-
-    .main__map{
-        margin-top: 60px;
-    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -768,31 +723,6 @@
         width: 290px;
     }
 
-    .main__map{
-        grid-auto-flow: row;
-    }
-
-    #map__block{
-        width: 100vw;
-        height: 300px;
-    }
-
-    .page__footer{
-        grid-auto-flow: row;
-        height: auto;
-        justify-content: left;
-        padding-top: 15px;
-    }
-
-    .footer__navigation{
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .footer__navigation .navigation__container{
-        grid-template-rows: repeat(2, 1fr);
-        grid-row-gap: 5px;
-    }
-
     .main__advantages:after, .main__reviews:after{
         width: 112px;
         height: 130px;
@@ -806,7 +736,33 @@
         top: 105px;
     }
 
-    .header__navigation{
+    .rooms__container, .reviews__container{
+        margin-top: 0;
+    }
+
+    .rooms__slider{
+        height: 535px;
+    }
+
+    .reviews__slid{
+        width: 240px;
+        padding: 25px;
+        height: 180px;
+    }
+
+    .slid__text:before{
+        font-size: 54px;
+    }
+
+    .slid__info{
         display: none;
+    }
+
+    .reviews__slider{
+        margin-left: 15px;
+    }
+
+    .reviews__container{
+        margin-top: 30px;
     }
 }

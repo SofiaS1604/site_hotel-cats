@@ -4,7 +4,6 @@ const $ = el => document.querySelector(el),
 
 let left = 100;
 
-
 let i = 0;
 const roomInfo = [
     {
@@ -136,5 +135,21 @@ function submitReservation() {
     if (errors === 0) {
         $('.window__reservation').style.display = 'none';
         $('.window__confirmation').style.display = 'block'
+    }
+}
+
+let menu_open = false;
+
+function menuChange(el) {
+    menu_open = !menu_open
+
+    if (menu_open){
+        el.classList.value = 'navigation__mobile navigation__mobile--active mobile';
+        $('.header__navigation .navigation__container').style.display = 'block'
+        $('.page__header').style.position = 'fixed'
+    }else{
+        el.classList.value = 'navigation__mobile mobile'
+        $('.header__navigation .navigation__container').style.display = 'none'
+        $('.page__header').style.position = 'relative'
     }
 }

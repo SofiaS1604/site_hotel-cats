@@ -19,6 +19,11 @@
         <img src="./images/logo.png" alt="Logo" class="logo__image"/>
     </a>
     <nav class="header__navigation navigation">
+        <div onclick="menuChange(this)" class="navigation__mobile mobile">
+            <span class="mobile__item"></span>
+            <span class="mobile__item"></span>
+            <span class="mobile__item"></span>
+        </div>
         <ul class="navigation__container">
             <li class="navigation__item">
                 <a href="#advantages" class="navigation__link">Почему мы?</a>
@@ -32,6 +37,14 @@
             <li class="navigation__item">
                 <a href="#map" class="navigation__link">Как нас найти</a>
             </li>
+            <div class="navigation__networks networks">
+                <div class="networks__caption">8 (800) 333-55-99</div>
+                <div class="networks__icons">
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                    <div class="networks__icon"></div>
+                </div>
+            </div>
         </ul>
     </nav>
 </header>
@@ -272,7 +285,7 @@
     </div>
 </main>
 <footer class="page__footer footer">
-    <a href="./index.html" class="header__logo">
+    <a href="./index.html" class="footer__logo">
         <img src="./images/logo.png" alt="Logo" class="logo__image"/>
     </a>
     <nav class="footer__navigation navigation">
