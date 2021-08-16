@@ -174,7 +174,6 @@
 
 .rooms__banner {
     height: 379px;
-    width: calc(100vw - (98px * 2));
     background-size: cover;
     background-image: url("../images/banner.jpg");
     border-radius: 10px;
@@ -334,4 +333,79 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.rooms__block--filter{
+    display: none;
+}
+
+.rooms__buttons{
+    margin-left: auto;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1065px){
+    .main__rooms, .page__header{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 991px) {
+    .rooms__panel{
+        display: none;
+    }
+
+    .rooms__header{
+        margin-top: 60px;
+    }
+
+    .main__rooms{
+        margin-left: 45px;
+        margin-right: 45px;
+    }
+
+    .select__text img{
+        width: 12px;
+    }
+
+    .rooms__buttons{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 5px;
+    }
+
+    .rooms__block+.rooms__block{
+        margin-left: 30px;
+    }
+
+    .rooms__block{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .rooms__block--filter .select__value{
+        width: 81px;
+    }
+
+    .rooms__block--filter .rooms__select{
+        width: 121px;
+    }
+
+    .rooms__block--filter{
+        display: block;
+    }
+
+    .rooms__container{
+        display: block;
+    }
+
+    .rooms__banner{
+        height: 359px;
+        background-image: url("../images/banner-mobile.png");
+        margin-top: 120px;
+    }
+
+    .banner__container{
+        margin-left: 50px;
+    }
 }
